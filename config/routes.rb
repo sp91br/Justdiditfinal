@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   Rails.application.routes.draw do
-    root 'todo_items#index'
-    resources :todo_items
+    root 'goalblast_items#index'
+    resources :goalblast_items
     # a bunch of comments describing how to define routes to load page to heorku
   end
-  
+
 end
