@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>What is my Goal?</strong>
+  <%= @user.title %>
+</p>
+
+<p>
+  <strong>When do i plan to accomplish my goal?</strong>
+  <%= @user.subtitle %>
+</p>
+
+<p>
+  <strong>This upload is from day?</strong>
+  <%= @user.info %>
+</p>
+
+<p>
+  <strong>Url (to be removed with img selector):</strong>
+  <!-- <%= @user.url %> -->
+  <%= image_tag @user.url%>
+</p>
+
+<p>
+  <strong>Description of my milestone</strong>
+  <%= @user.description %>
+</p>
+
+<%= link_to 'Edit MileStone', edit_user_path(@user) %> |
+<!-- show edit link -->
+<%= link_to 'Back to MileStone list', users_path %>
+<!-- shows back link -->
