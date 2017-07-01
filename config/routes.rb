@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   Rails.application.routes.draw do
     root 'todo_items#index'
     resources :todo_items
-    # a bunch of comments describing how to define routes
+    # a bunch of comments describing how to define routes to load page to heorku
   end
+  
 end
