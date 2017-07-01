@@ -24,4 +24,3 @@
 * Services (job queues, cache servers, search engines, etc.)
 ##### Deployment instructions - Fork and clone the repository to work on the file
 
-* ...
