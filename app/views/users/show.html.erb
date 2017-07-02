@@ -21,6 +21,9 @@
   <%= image_tag @user.url%>
 </p>
 
+<!-- view helpers for image upload -->
+<%= image_tag @user.image.url(:medium) %>
+
 <p>
   <strong>Description of my milestone</strong>
   <%= @user.description %>
