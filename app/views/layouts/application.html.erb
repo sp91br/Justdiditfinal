@@ -11,13 +11,45 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
 
-    <!-- place CSS inside "<style>" -->
-    <style>
 
-    </style>
-    <%= yield %>
+
+
+    <ul class="nav-bar">
+      <% if user_signed_in? %>
+        <li><%= link_to current_user.email, edit_user_registration_path %></li>
+        <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
+        <!-- end user session -->
+      <% else %>
+        <li><%= link_to 'Sign-Up', new_user_registration_path %></li>
+        <!-- Sign and create a new user -->
+        <li><%= link_to 'Login', new_user_session_path %></li>
+        <!-- open a user session -->
+      <% end %>
+    </ul>
+
+
+    <div class="container">
+      <% if notice %>
+        <div class="alert notice">
+          <%= notice %>
+        </div>
+      <% end %>
+
+      <% if notice %>
+        <div class="alert warning">
+          <%= alert %>
+        </div>
+      <% end %>
+      <!-- place CSS inside "<style>" -->
+      <style>
+
+      </style>
+      <%= yield %>
+
+    </div>
+
+
+
   </body>
 </html>

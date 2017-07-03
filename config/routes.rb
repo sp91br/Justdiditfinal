@@ -3,6 +3,11 @@ Rails.application.routes.draw do
 
   resources :users
 
+
+  # devise_scope :user do
+  #  root :to => 'devise/sessions#new'
+  # end
+  # root "sessions#new"
   root "users#index"
   # patch "users#update"
 
