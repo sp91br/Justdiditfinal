@@ -23,11 +23,6 @@ gem 'rails', '~> 5.1.2'
 # simplification of the code above to this below
 gem 'pg'
 
-
-
-
-
-
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets

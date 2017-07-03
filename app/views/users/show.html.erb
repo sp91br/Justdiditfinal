@@ -15,12 +15,6 @@
   <%= @user.info %>
 </p>
 
-<p>
-  <strong>Url (to be removed with img selector):</strong>
-  <!-- <%= @user.url %> -->
-  <%= image_tag @user.url%>
-</p>
-
 <!-- view helpers for image upload -->
 <%= image_tag @user.image.url(:medium) %>
 

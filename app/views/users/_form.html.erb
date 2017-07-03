@@ -11,6 +11,15 @@
     </div>
   <% end %>
 
+  <div class="control-group">
+    <%= form.label "Status", class: 'control-label' %>
+    <div class="controls">
+      <%= form.select(:status_type, options_for_select([['GOAL', 'GOAL'], ['PENDING', 'PENDING']])) %>
+    </div>
+  </div>
+
+
+
   <div class="field">
     <%= form.label :title %>
     <%= form.text_area :title, id: :user_title %>
@@ -26,16 +35,10 @@
     <%= form.text_field :info, id: :user_info %>
   </div>
 
-  <div class="field">
-    <%= form.label :url %>
-    <%= form.text_field :url, id: :user_url %>
-  </div>
-
   <!-- used for uploading images -->
   <div class="field">
       <%= form.label :image %>
       <%= form.file_field :image %>
-
   </div>
 
   <div class="field">
