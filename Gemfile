@@ -5,6 +5,12 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+#  hirb gem for viewing database content
+gem 'hirb', '~> 0.7.3'
+
+# devise for the creation
+gem 'devise', '~> 4.3'
+
 # paperclip gem for uploading files
 gem "paperclip", "~> 5.0.0"
 
@@ -21,7 +27,7 @@ gem 'rails', '~> 5.1.2'
 # end
 
 # simplification of the code above to this below
-gem 'pg'
+gem 'pg', '~> 0.21.0'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
