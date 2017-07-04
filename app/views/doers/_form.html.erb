@@ -1,4 +1,5 @@
-<%= form_for @doer, html: { multipart: true } do |form| %>
+
+<%= form_for @doer, url: users_path do |form| %>
 <%= form_with(model: doer, local: true) do |form| %>
   <% if doer.errors.any? %>
     <div id="error_explanation">

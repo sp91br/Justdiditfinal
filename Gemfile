@@ -19,7 +19,7 @@ gem 'rails', '~> 5.1.2'
 
 # # Use sqlite3 as the database for Active Record in Development to load to heroku
 # group :development do
-#   gem 'sqlite3'
+  gem 'sqlite3'
 # end
 # # Use postgreSQL as the database for Active Record in Production to load to heroku
 # group :production do
@@ -27,7 +27,7 @@ gem 'rails', '~> 5.1.2'
 # end
 
 # simplification of the code above to this below
-gem 'pg', '~> 0.21.0'
+# gem 'pg', '~> 0.21.0'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
