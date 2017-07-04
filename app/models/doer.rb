@@ -1,0 +1,2 @@
+class Doer < ApplicationRecord
+end

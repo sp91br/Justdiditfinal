@@ -1,0 +1,43 @@
+<%= form_with(model: milestone, local: true) do |form| %>
+  <% if milestone.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(milestone.errors.count, "error") %> prohibited this milestone from being saved:</h2>
+
+      <ul>
+      <% milestone.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :milestone_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :day %>
+    <%= form.number_field :day, id: :milestone_day %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :milestone_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :goal_id %>
+    <%= form.number_field :goal_id, id: :milestone_goal_id %>
+  </div>
+
+  <!-- used for uploading images -->
+  <div class="field">
+      <%= form.label :image %>
+      <%= form.file_field :image %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

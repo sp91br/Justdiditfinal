@@ -1,0 +1,32 @@
+<%= form_with(model: doer, local: true) do |form| %>
+  <% if doer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(doer.errors.count, "error") %> prohibited this doer from being saved:</h2>
+
+      <ul>
+      <% doer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :doer_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bio %>
+    <%= form.text_area :bio, id: :doer_bio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id, id: :doer_user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

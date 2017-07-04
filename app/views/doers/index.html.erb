@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Doers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Bio</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @doers.each do |doer| %>
+      <tr>
+        <td><%= doer.name %></td>
+        <td><%= doer.bio %></td>
+        <td><%= doer.user_id %></td>
+        <td><%= link_to 'Show', doer %></td>
+        <td><%= link_to 'Edit', edit_doer_path(doer) %></td>
+        <td><%= link_to 'Destroy', doer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Doer', new_doer_path %>
