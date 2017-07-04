@@ -3,18 +3,107 @@
 <!-- place Bootstrap classes inside <head>-->
 
   <head>
+    <!-- header font link -->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Sigmar+One" />
+    <!-- header font link -->
     <title>Goalblast</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
+
+
     <!-- place CSS inside "<style>" -->
+
+
     <style>
 
-    </style>
-    <%= yield %>
+
+#guy2{
+  padding-top: 3em;
+  padding-right: 2em;
+      float:right;
+  }
+
+#guy{
+  padding-top: 3em;
+  padding-left: 2em;
+  padding-right: 2em;
+  float: left;
+}
+
+
+    body {
+    height: 100%;
+    width: auto;
+    /*-webkit-background-size: cover;*/
+    /*-moz-background-size: cover;*/
+    /*-o-background-size: cover;*/
+    background-size: cover;
+    background: #006BC1;
+    /*background-repeat:no-repeat;*/
+    background: -webkit-linear-gradient( #006BC1, #130046);
+    background: -moz-linear-gradient(#006BC1, #130046);
+    background: -ms-linear-gradient(#006BC1, #130046);
+    background: -o-linear-gradient( #006BC1, #130046);
+    background: linear-gradient( #006BC1, #130046);
+}
+/* index page*/
+/*goal lines*/
+img.current_goal {
+    width:150px;
+    height: auto;}
+img {
+    width:300px;
+    height: auto;}
+
+    @import url('https://fonts.googleapis.com/css?family=Abel|Aguafina+Script|Artifika|Athiti|Condiment|Dosis|Droid+Serif|Farsan|Gurajada|Josefin+Sans|Lato|Lora|Merriweather|Noto+Serif|Open+Sans+Condensed:300|Playfair+Display|Rasa|Sahitya|Share+Tech|Text+Me+One|Titillium+Web');
+    body {
+    /*  background-image: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%); */
+        /*background: url(https://static.pexels.com/photos/5782/nature-flowers-vintage-plant.jpg);*/
+        background-attachment: fixed;
+        background-size:auto;
+        margin: 0;
+    }
+
+#form{
+  color:white;
+  background-image: url("https://s-media-cache-ak0.pinimg.com/736x/ea/46/da/ea46da1a025c88c92a51210a3eab72f7.jpg");
+  background-repeat: no-repeat;
+
+}
+#user_description{
+  color:black;
+}
+
+#user_subtitle{
+  color:black;
+}
+
+#user_title{
+  color: black;
+}
+#new_user{
+  padding-top: 2em;
+}
+/*goal creator style font*/
+h1{
+  color:white;
+  font-family: "Sigmar One";
+	font-size: 63px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+}
+
+</style>
+
+<%= yield %>
   </body>
+
 </html>

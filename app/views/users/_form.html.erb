@@ -1,3 +1,6 @@
+<div id="form">
+
+
 <%= form_for @user, html: { multipart: true } do |form| %>
   <% if user.errors.any? %>
     <div id="error_explanation">
@@ -11,13 +14,8 @@
     </div>
   <% end %>
 
-  <div class="control-group">
-    <%= form.label "Status", class: 'control-label' %>
-    <div class="controls">
-      <%= form.select(:status_type, options_for_select([['GOAL', 'GOAL'], ['PENDING', 'PENDING']])) %>
-    </div>
-  </div>
 
+<%= link_to 'Back to MileStone list', users_path %>
 
 
   <div class="field">
@@ -50,3 +48,4 @@
     <%= form.submit %>
   </div>
 <% end %>
+</div>
