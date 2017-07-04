@@ -20,9 +20,7 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= user.title %></td>
-        <td><%= user.subtitle %></td>
-        <td><%= user.info %></td>
+        <td><%= user.name %></td>
         <td><%= image_tag user.image %></td>
         <td><%= user.description %></td>
         <td><%= link_to 'Show MileStone Details', user %></td>
