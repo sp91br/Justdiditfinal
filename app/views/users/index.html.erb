@@ -23,11 +23,11 @@
         <td><%= user.name %></td>
         <td><%= image_tag user.image %></td>
         <td><%= user.description %></td>
-        <td><%= link_to 'Show MileStone Details', user %></td>
+        <td><%= link_to 'Show User Details', user %></td>
         <!-- links to show view -->
-        <td><%= link_to 'Edit MileStone', edit_user_path(user) %></td>
+        <td><%= link_to 'Edit user', edit_user_path(user) %></td>
         <!-- links to edit -->
-        <td><%= link_to 'Delete MileStone', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete user', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <!-- links to desrtoy -->
       </tr>
     <% end %>

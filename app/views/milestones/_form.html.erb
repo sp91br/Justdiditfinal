@@ -31,6 +31,12 @@
     <%= form.number_field :goal_id, id: :milestone_goal_id %>
   </div>
 
+  <!-- used for uploading images -->
+  <div class="field">
+      <%= form.label :image %>
+      <%= form.file_field :image %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

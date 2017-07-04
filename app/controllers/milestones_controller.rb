@@ -1,6 +1,7 @@
 class MilestonesController < ApplicationController
   before_action :set_milestone, only: [:show, :edit, :update, :destroy]
 
+
   # GET /milestones
   # GET /milestones.json
   def index
@@ -24,6 +25,8 @@ class MilestonesController < ApplicationController
   # POST /milestones
   # POST /milestones.json
   def create
+    # attr_accessor for 'image_file_name'
+
     @milestone = Milestone.new(milestone_params)
 
     respond_to do |format|
@@ -69,6 +72,6 @@ class MilestonesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def milestone_params
-      params.require(:milestone).permit(:title, :day, :description, :goal_id)
+      params.require(:milestone).permit(:title, :day, :description, :image, :goal_id)
     end
 end

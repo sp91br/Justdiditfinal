@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :doers
   resources :milestones
   resources :goals
   devise_for :users
@@ -8,7 +9,7 @@ Rails.application.routes.draw do
   #   # end
 
 
-  root "users#index"
+  root "doers#index"
   # devise_scope :users do
   #  get "/" => 'users/sessions#create'
   # end

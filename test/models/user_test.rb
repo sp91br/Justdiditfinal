@@ -33,5 +33,5 @@ class UserTest < ActiveSupport::TestCase
   #   assert true
   # end
 
-  has_many :goals
+  
 end
