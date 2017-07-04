@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
+  resources :milestones
+  resources :goals
   devise_for :users
   resources :users
 
   # resources :goals do
-  #   resources :milestones
-  # end
+  #   # end
 
 
   root "users#index"
