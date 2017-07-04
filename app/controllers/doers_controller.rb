@@ -1,5 +1,6 @@
 class DoersController < ApplicationController
   before_action :set_doer, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
 
   # GET /doers
   # GET /doers.json
@@ -24,6 +25,7 @@ class DoersController < ApplicationController
   # POST /doers
   # POST /doers.json
   def create
+    # attr_accessor for 'image_file_name'
     @doer = Doer.new(doer_params)
 
     respond_to do |format|
@@ -69,6 +71,6 @@ class DoersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def doer_params
-      params.require(:doer).permit(:name, :bio, :user_id)
+      params.require(:doer).permit(:name, :bio, :image , :user_id)
     end
 end

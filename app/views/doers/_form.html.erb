@@ -1,3 +1,5 @@
+
+<%= form_for @doer, url: users_path do |form| %>
 <%= form_with(model: doer, local: true) do |form| %>
   <% if doer.errors.any? %>
     <div id="error_explanation">
@@ -21,12 +23,19 @@
     <%= form.text_area :bio, id: :doer_bio %>
   </div>
 
+  <!-- used for uploading images -->
   <div class="field">
-    <%= form.label :user_id %>
+      <%= form.label :image %>
+      <%= form.file_field :image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :does_id %>
     <%= form.number_field :user_id, id: :doer_user_id %>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
+<% end %>
 <% end %>

@@ -6,5 +6,5 @@ class DoerTest < ActiveSupport::TestCase
   # end
 
 
-  has_many :goals
+  
 end
