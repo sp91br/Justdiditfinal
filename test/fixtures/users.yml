@@ -3,13 +3,13 @@
 one:
   title: MyText
   subtitle: MyText
-  info: 
+  info:
   url: MyString
   description: MyText
 
 two:
   title: MyText
   subtitle: MyText
-  info: 
+  info:
   url: MyString
   description: MyText

@@ -1,7 +1,9 @@
+
 <center><h1>Goal Creator</h1><center>
   <!-- image guy running -->
   <div id="guy">
     <img src="https://edc2.healthtap.com/ht-staging/user_answer/reference_image/17120/large/Hip_muscle_weakness.jpeg?1386669779">
+
 
   </div>
 <!-- end image -->
@@ -11,3 +13,10 @@
 </div>
 <!-- end image -->
 <%= render 'form', user: @user %>
+
+<br>
+<%= link_to 'goals', new_goal_url %> |
+<br>
+<%= link_to 'Back to MileStone list', users_path %>
+<!-- links to back -->
+

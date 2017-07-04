@@ -1,25 +1,16 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>What is my Goal?</strong>
-  <%= @user.title %>
+  <strong>your name</strong>
+  <%= @user.name %>
 </p>
 
-<p>
-  <strong>When do i plan to accomplish my goal?</strong>
-  <%= @user.subtitle %>
-</p>
-
-<p>
-  <strong>This upload is from day?</strong>
-  <%= @user.info %>
-</p>
 
 <!-- view helpers for image upload -->
 <%= image_tag @user.image.url(:medium) %>
 
 <p>
-  <strong>Description of my milestone</strong>
+  <strong>info</strong>
   <%= @user.description %>
 </p>
 
