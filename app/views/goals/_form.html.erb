@@ -26,12 +26,15 @@
     <%= form.text_area :description, id: :goal_description %>
   </div>
 
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.number_field :user_id, id: :goal_user_id %>
-  </div>
+  
+    <!-- used for uploading images -->
+    <div class="field">
+        <%= form.label :image %>
+        <%= form.file_field :image %>
+    </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+
 <% end %>
