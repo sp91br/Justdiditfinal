@@ -25,16 +25,29 @@ class GoalsController < ApplicationController
   # POST /goals.json
   def create
     @goal = Goal.new(goal_params)
+    # @goal.user_id = current_user.id
+    # # respond_to do |format|
+    #   if @goal.save
+    #     format.html { redirect_to @goal, notice: 'Goal was successfully created.' }
+    #     format.json { render :show, status: :created, location: @goal }
+    #   else
+    #     format.html { render :new }
+    #     format.json { render json: @goal.errors, status: :unprocessable_entity }
+    #   end
+    # end
 
-    respond_to do |format|
-      if @goal.save
-        format.html { redirect_to @goal, notice: 'Goal was successfully created.' }
-        format.json { render :show, status: :created, location: @goal }
-      else
-        format.html { render :new }
-        format.json { render json: @goal.errors, status: :unprocessable_entity }
-      end
+
+  if @goal.save
+      flash[:success] = "The photo was added!"
+      redirect_to root_path
+    else
+      render 'new'
     end
+
+
+
+
+
   end
 
   # PATCH/PUT /goals/1
@@ -69,6 +82,6 @@ class GoalsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def goal_params
-      params.require(:goal).permit(:name, :length, :description, :user_id)
+      params.require(:goal).permit(:name, :length, :image, :description, :user_id)
     end
 end

@@ -24,11 +24,12 @@ class MilestonesController < ApplicationController
 
   # POST /milestones
   # POST /milestones.json
+
   def create
-    # attr_accessor for 'image_file_name'
+    # attr_accessor :image_file_name
 
     @milestone = Milestone.new(milestone_params)
-
+    
     respond_to do |format|
       if @milestone.save
         format.html { redirect_to @milestone, notice: 'Milestone was successfully created.' }

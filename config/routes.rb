@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   #   # end
 
 
-  root "doers#index"
+  root "goals#index"
   # devise_scope :users do
   #  get "/" => 'users/sessions#create'
   # end
