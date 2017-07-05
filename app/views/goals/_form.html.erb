@@ -1,3 +1,5 @@
+<%= form_for @goal, html: { multipart: true } do |form| %>
+
 <%= form_with(model: goal, local: true) do |form| %>
   <% if goal.errors.any? %>
     <div id="error_explanation">
@@ -17,6 +19,11 @@
   </div>
 
   <div class="field">
+      <span class= "hide"><%= form.label :user_id %></span>
+      <%= form.hidden_field :user_id, id: :goal_user_id, value: current_user.id%>
+  </div>
+
+  <div class="field">
     <%= form.label :length %>
     <%= form.number_field :length, id: :goal_length %>
   </div>
@@ -26,15 +33,16 @@
     <%= form.text_area :description, id: :goal_description %>
   </div>
 
-  
+
     <!-- used for uploading images -->
     <div class="field">
         <%= form.label :image %>
-        <%= form.file_field :image %>
+        <%= form.file_field :image, id: :goal_image %>
     </div>
 
     <div class="actions">
       <%= form.submit %>
     </div>
 
+<% end %>
 <% end %>
