@@ -10,9 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 20170704220657) do
-
 
   create_table "doers", force: :cascade do |t|
     t.string "name"
@@ -21,62 +19,17 @@ ActiveRecord::Schema.define(version: 20170704220657) do
     t.datetime "updated_at", null: false
   end
 
-
-  create_table "doers", force: :cascade do |t|
+  create_table "goals", force: :cascade do |t|
     t.string "name"
-
     t.integer "length"
     t.text "description"
-
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "goals", force: :cascade do |t|
-    t.text "title"
-    t.text "subtitle"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "couse_id"
   end
 
   create_table "milestones", force: :cascade do |t|
-    t.integer "info"
-    t.string "url"
-    t.text "description"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "couse_id"
-  end
-
-  create_table "steps", force: :cascade do |t|
+    t.string "title"
     t.integer "day"
-    t.text "discription"
-    t.bigint "target_id"
-    t.string "image_file_name"
-    t.string "image_content_type"
-    t.integer "image_file_size"
-    t.datetime "image_updated_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["target_id"], name: "index_steps_on_target_id"
-  end
-
-  create_table "targets", force: :cascade do |t|
-    t.string "goal"
-    t.integer "days"
-    t.bigint "doer_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["doer_id"], name: "index_targets_on_doer_id"
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.text "title"
-    t.text "subtitle"
-    t.integer "info"
-
-
     t.text "description"
     t.integer "goal_id"
     t.datetime "created_at", null: false
@@ -99,16 +52,10 @@ ActiveRecord::Schema.define(version: 20170704220657) do
     t.integer "sign_in_count", default: 0, null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-
-    
-
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
-
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "steps", "targets"
-  add_foreign_key "targets", "doers"
 end

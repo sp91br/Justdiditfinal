@@ -78,20 +78,7 @@ body {
 #form button:hover{transform: translatey(2px);}
 #form button:active{transform: translatey(5px);}
 
-body {
-    height: 100%;
-    width: auto;
-    /*-webkit-background-size: cover;*/
-    /*-moz-background-size: cover;*/
-    /*-o-background-size: cover;*/
-    background-size: cover;
-    background: #006BC1;
-    /*background-repeat:no-repeat;*/
-    background: -webkit-linear-gradient( #006BC1, #130046);
-    background: -moz-linear-gradient(#006BC1, #130046);
-    background: -ms-linear-gradient(#006BC1, #130046);
-    background: -o-linear-gradient( #006BC1, #130046);
-    background: linear-gradient( #006BC1, #130046);
+
 }
 /* index page*/
 /*goal lines*/
